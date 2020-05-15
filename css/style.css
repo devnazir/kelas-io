@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Poppins-Regular */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+/* Poppins-Bold */
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    max-width: 1440px;
+
+}
+
+.container {
+    width: 100%;
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar{
+    width:0px;
+    background-color:transparent;
+}
+
+/* Header */
+
+header {
+    background-image: linear-gradient(to bottom right, rgba(58, 131, 240, .4), rgba(255, 255, 255, .4));
+    display: grid;
+    height: 803px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "nav nav" "info info";
+    overflow: hidden;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    grid-area: nav;
+    align-items: center;
+    height: 110px;
+    position: relative;
+}
+
+header nav ul {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: rgba(255, 255, 255);
+    transition: 0.3s;
+}
+
+header nav ul li:last-child a {
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(25, 73, 144, 0.5);
+    color: #194990;
+}
+
+header nav ul li:last-child a:hover {
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255);
+    color: #194990;
+}
+
+header .tag-line {
+    font-family: 'Poppins-Bold', sans-serif;
+    position: absolute;
+    width: 421px;
+    left: 120px;
+    top: 150px;
+    cursor: default;
+}
+
+header .tag-line h1 {
+    font-size: 48px;
+    line-height: 75px;
+    font-weight: bold;
+    height: 225px;
+    color: #1A1A1A;
+}
+
+header .tag-line .img-download {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+header .tag-line h1 span {
+    color: #194990;
+}
+
+header .tag-line p {
+    letter-spacing: 0.03em;
+    line-height: 35px;
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 35px;
+    color: rgba(26, 26, 26, 0.8);
+}
+
+header .info {
+    grid-area: info;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav .menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+header nav .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #1A1A1A;
+    transition: transform .5s;
+}
+
+header nav .menu-toggle span:nth-child(1) {
+    transform-origin: 0 0;
+}
+
+header nav .menu-toggle span:nth-child(3) {
+    transform-origin: 0 100%;
+}
+
+header nav .menu-toggle.close span:nth-child(1) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+header nav .menu-toggle.close span:nth-child(2) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+header nav .menu-toggle.close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+header nav ul.nav-open {
+    opacity: 1;
+    transition: .5s;
+    transform: translateY(0%) scale(1);
+    width: 100%;
+}
+
+/* Akhir Header */
+
+/* About */
+
+.about .about-container {
+    display: flex;
+    height: 234px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: rgba(58, 131, 240, 0.05);
+}
+
+.about .satu, .about .dua, .about .tiga {
+    width: 287px;
+    letter-spacing: 3%;
+    position: relative;
+}
+
+.about .dua {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.about .dua::before, .about .dua::after {
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    left: 0px;
+    top: 0;
+}
+
+.about .dua::after {
+    right: 0px;
+    top: 0;
+}
+
+.about .about-container h3 {
+    height: 75px;
+    font-size: 36px;
+}
+
+.about .about-container h3 span {
+    color: #194990;
+}
+
+/* Akhir About */
+
+/* Breakpoint Responsive */
+
+/* Tablet 10inch */
+
+@media screen and (max-width: 968px) {
+
+    /* Header */
+    header .tag-line p {
+        color: #1A1A1A;
+        font-size: 20px;
+        font-weight: bold;
+        filter: drop-shadow(0px 1px #FFF);
+    }
+    header nav {
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+        z-index: 9999;
+    }
+    header nav ul {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        position: absolute;
+        background-color: #FFF;
+        top: 100px;
+        width: 0%;
+        opacity: 0;
+        transform: scale(0);
+        transform: translateY(-20px);
+    }
+    header .tag-line {
+        top: 50px;
+        bottom: 0;
+        left: 0px;
+        right: 0;
+        margin-left: 80px;
+        z-index: 1;
+    }
+    header .info .img-header img {
+        transform: scale(0.9) translateX(250px) translateY(50px);
+    }
+    header nav .menu-toggle {
+        display: flex;
+    }
+    /* Akhir Header */
+
+    /* About */
+    .about .about-container {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .about .dua {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .about .dua::before, .about .dua::after{
+        display: none;
+    }
+
+    .about .satu, .about .dua, .about .tiga {
+        margin: 50px 50px;
+    }
+    /* Akhir Header */
+}
+
+/* Ponsel */
+
+@media screen and (max-width: 578px) {
+    header {
+        height: 800px;
+    }
+    header .tag-line p {
+        display: none;
+    }
+    header nav .logo {
+        transform: scale(0.8);
+    }
+    header .tag-line {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 50px 50px;
+        z-index: 1;
+        height: max-content;
+        width: 200px;
+    }
+    header .tag-line h1 {
+        color: #FFF;
+        font-size: 30px;
+        line-height: 50px;
+        filter: drop-shadow(1px 1px #1A1A1A);
+        height: 120px;
+    }
+    header .info .img-header img {
+        transform: scale(1);
+    }
+    header .info .img-download {
+        width: max-content;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        flex-direction: column;
+        margin-left: -15px;
+    }
+    header .tag-line a:last-child img {
+        transform: scale(0.91);
+    }
+    header .info {
+        justify-content: center;
+    }
+}
+
+/* Ponsel 375px */
+
+@media screen and (max-width:375px) {
+    header nav .logo {
+        transform: scale(0.8);
+    }
+}
