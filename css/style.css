@@ -22,7 +22,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: auto;
     max-width: 1440px;
-
 }
 
 .container {
@@ -30,9 +29,9 @@ body {
     background-color: #FFF;
 }
 
-::-webkit-scrollbar{
-    width:0px;
-    background-color:transparent;
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
 }
 
 /* Header */
@@ -186,57 +185,111 @@ header nav ul.nav-open {
 /* About */
 
 .about .about-container {
-    display: flex;
-    height: 234px;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    background-color: rgba(58, 131, 240, 0.05);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.about .satu, .about .dua, .about .tiga {
-    width: 287px;
-    letter-spacing: 3%;
+.about .about-container .about-head {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    background: rgba(58, 131, 240, 0.05);
+    align-items: center;
+    height: 234px;
+    justify-content: space-evenly;
+}
+
+.about .about-container .about-head .content {
+    text-align: center;
     position: relative;
 }
 
-.about .dua {
-    padding-right: 50px;
-    padding-left: 50px;
+.about .about-container .about-head .content:nth-child(2) {
+    width: 357px;
 }
 
-.about .dua::before, .about .dua::after {
+.about .about-container .about-head .content:nth-child(2) p {
+    margin: auto;
+}
+
+.about .about-container .about-head .content:nth-child(2)::after {
     content: "";
     display: block;
-    height: 100px;
     position: absolute;
+    top: 15px;
+    width: 357px;
+    height: 110px;
     border-right: 1px solid rgba(0, 0, 0, 0.4);
-    left: 0px;
-    top: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.about .dua::after {
-    right: 0px;
-    top: 0;
+.about .about-container .about-head .content p {
+    width: 287px;
+    height: 70px;
 }
 
-.about .about-container h3 {
+.about .about-container .about-head .content h3 {
     height: 75px;
+    color: #1A1A1A;
     font-size: 36px;
 }
 
-.about .about-container h3 span {
-    color: #194990;
+.about .about-container .about-head .content h3 span {
+    color: rgb(25, 73, 144);
+}
+
+.about .about-container .about-web {
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+
+.about .about-container .about-web .kelas-io {
+    width: 467px;
+}
+
+.about .about-container .about-web .kelas-io h1 {
+    width: 221px;
+    height: 150px;
+    color: #1A1A1A;
+    font-size: 48px;
+    font-family: "Poppins-Bold";
+}
+
+.about .about-container .about-web .kelas-io p {
+    margin-top: 25px;
+    width: 467px;
+    font-size: 16px;
+}
+
+.about .about-container .about-web .img img {
+    display: none;
+}
+
+.about .about-container .about-web .kelas-io hr {
+    margin-top: 50px;
+    width: 445px;
+}
+
+.about .about-container .about-web .kelas-io h1 span {
+    color: #3A83F0;
 }
 
 /* Akhir About */
 
 /* Breakpoint Responsive */
 
+/* Laptop */
+@media screen and (max-width:1440px){
+    .about .about-container .about-web .img img {
+        display: block;
+    }
+}
+
 /* Tablet 10inch */
 
 @media screen and (max-width: 968px) {
-
     /* Header */
     header .tag-line p {
         color: #1A1A1A;
@@ -279,24 +332,17 @@ header nav ul.nav-open {
         display: flex;
     }
     /* Akhir Header */
-
     /* About */
-    .about .about-container {
+    .about .about-container .about-head {
         flex-wrap: wrap;
+        justify-content: center;
         height: auto;
     }
-
-    .about .dua {
-        padding-right: 0px;
-        padding-left: 0px;
+    .about .about-container .about-head .content {
+        margin: 30px 30px;
     }
-
-    .about .dua::before, .about .dua::after{
+    .about .about-container .about-head .content:nth-child(2)::after {
         display: none;
-    }
-
-    .about .satu, .about .dua, .about .tiga {
-        margin: 50px 50px;
     }
     /* Akhir Header */
 }
@@ -305,7 +351,7 @@ header nav ul.nav-open {
 
 @media screen and (max-width: 578px) {
     header {
-        height: 800px;
+        height: 600px;
     }
     header .tag-line p {
         display: none;
