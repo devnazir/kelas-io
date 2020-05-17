@@ -242,48 +242,132 @@ header nav ul.nav-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: max-content;
+    height: 400px;
 }
 
 .about .about-container .about-web .kelas-io {
-    width: 467px;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .about .about-container .about-web .kelas-io h1 {
     width: 221px;
-    height: 150px;
+    padding-bottom: 20px;
     color: #1A1A1A;
     font-size: 48px;
+    align-items: center;
     font-family: "Poppins-Bold";
+    margin: auto;
+}
+
+.about .about-container .about-web .kelas-io hr {
+    display: none;
 }
 
 .about .about-container .about-web .kelas-io p {
     margin-top: 25px;
     width: 467px;
     font-size: 16px;
+    margin: auto;
 }
 
 .about .about-container .about-web .img img {
     display: none;
 }
 
-.about .about-container .about-web .kelas-io hr {
-    margin-top: 50px;
-    width: 445px;
-}
-
 .about .about-container .about-web .kelas-io h1 span {
     color: #3A83F0;
 }
 
+.about .about-container .about-web .kelas-io .link {
+    display: flex;
+    width: 445px;
+}
+
+.about .about-container .about-web .kelas-io .link img {
+    width: 24px;
+    margin: auto;
+    background: rgba(58, 131, 240, 0.15);
+    border-radius: 50%;
+    padding: 5px;
+}
+
 /* Akhir About */
+
+/* Footer */
+
+footer {
+    background-image: linear-gradient(to top, rgba(58, 131, 240, .4), rgba(255, 255, 255, .4));
+    display: grid;
+    height: 315px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    grid-area: 1 / 1 / 2 / 4;
+    align-items: center;
+    height: 110px;
+}
+
+footer nav ul {
+    display: flex;
+    width: 575px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer nav ul li {
+    list-style: none;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 16px;
+}
+
+footer nav ul li a:hover {
+    color: rgba(255, 255, 255);
+    transition: 0.3s;
+}
+
+/* Akhir Footer */
 
 /* Breakpoint Responsive */
 
 /* Laptop */
-@media screen and (max-width:1440px){
+
+@media screen and (min-width:1336px) {
+    .about .about-container .about-web {
+        height: max-content;
+    }
     .about .about-container .about-web .img img {
         display: block;
+        width: 567px;
+    }
+    .about .about-container .about-web .kelas-io {
+        display: grid;
+        width: 467px;
+    }
+    .about .about-container .about-web .kelas-io hr {
+        margin-top: 40px;
+        width: 445px;
+        display: block;
+    }
+    .about .about-container .about-web .kelas-io h1 {
+        margin: unset;
+    }
+    .about .about-container .about-web .kelas-io .link {
+        margin-top: 20px;
+    }
+    .about .about-container .about-web .kelas-io .link p {
+        transform: translateX(20px);
+        margin: auto;
     }
 }
 
@@ -344,12 +428,29 @@ header nav ul.nav-open {
     .about .about-container .about-head .content:nth-child(2)::after {
         display: none;
     }
+    .about .about-container .about-web .kelas-io {
+        justify-content: center;
+        width: 550px;
+    }
+    .about .about-container .about-web .kelas-io p {
+        width: inherit;
+    }
+    .about .about-container .about-web .kelas-io .link img {
+        display: none;
+    }
+    .about .about-container .about-web .kelas-io .link {
+        width: inherit;
+    }
+    .about .about-container .about-web .kelas-io .link p {
+        margin-top: 20px;
+    }
     /* Akhir Header */
 }
 
 /* Ponsel */
 
 @media screen and (max-width: 578px) {
+    /* Header */
     header {
         height: 600px;
     }
@@ -392,6 +493,17 @@ header nav ul.nav-open {
     header .info {
         justify-content: center;
     }
+    /* Akhir Header */
+    /* About */
+    .about .about-container .about-web .kelas-io h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .about .about-container .about-web .kelas-io {
+        width: 300px;
+        text-align: justify;
+    }
+    /* Akhir About */
 }
 
 /* Ponsel 375px */
