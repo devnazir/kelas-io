@@ -21,7 +21,7 @@ window.document.addEventListener('scroll', function () {
 });
 
 
-var overlay = document.getElementById("overlay"); /* untuk mengambil elemen berdasarkan id yang ada id html */
+var overlay = document.getElementById("overlay");
  
 window.addEventListener('load', function()
 {
