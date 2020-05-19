@@ -19,3 +19,11 @@ window.document.addEventListener('scroll', function () {
 		navbar.classList.remove('setNav');
 	}
 });
+
+
+var overlay = document.getElementById("overlay"); /* untuk mengambil elemen berdasarkan id yang ada id html */
+ 
+window.addEventListener('load', function()
+{
+	overlay.style.display = 'none';
+})
