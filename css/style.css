@@ -90,7 +90,7 @@ header nav {
     align-items: center;
     position: relative;
     height: 110px;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 header nav ul {
