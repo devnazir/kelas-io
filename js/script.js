@@ -1,13 +1,21 @@
-const container = document.querySelector('.container');
-container.addEventListener('click', function (e) {
-    if (e.target.className == 'menu-toggle' || e.target.className == 'menu-toggle close') {
-        e.target.parentElement.children[1].classList.toggle('nav-open');
-        if (e.target.parentElement.children[1].classList.contains('nav-open')) {
-            e.target.classList.add('close');
-            document.body.style.overflowY = 'hidden';
-        } else {
-            e.target.classList.remove('close');
-            document.body.style.overflowY = 'visible';
-        }
-    }
+const menuToggle = document.querySelector('header nav .menu-toggle');
+menuToggle.addEventListener('click', function () {
+	menuToggle.classList.toggle('close');
+	menuToggle.parentElement.children[1].classList.toggle('nav-open');
+	if(menuToggle.parentElement.children[1].classList.contains('nav-open')){
+		menuToggle.parentElement.parentElement.parentElement.style.backgroundColor = 'white';
+		document.body.style.overflowY = 'hidden';
+	} else {
+		document.body.style.overflowY = 'visible';
+	}
+});
+
+window.document.addEventListener('scroll', function () {
+	let wScroll = window.scrollY;
+	const navbar = document.querySelector('header nav');
+	if (wScroll > 700) {
+		navbar.classList.add('setNav');
+	} else if (wScroll <= 700) {
+		navbar.classList.remove('setNav');
+	}
 });
