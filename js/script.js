@@ -10,20 +10,20 @@ menuToggle.addEventListener('click', function () {
 	}
 });
 
-window.document.addEventListener('scroll', function () {
+window.addEventListener('scroll', function () {
+	
 	let wScroll = window.scrollY;
+	console.log(wScroll)
 	const navbar = document.querySelector('header nav');
-	if (wScroll > 700) {
+	if (wScroll > 450) {
 		navbar.classList.add('setNav');
-	} else if (wScroll <= 700) {
+	} else if (wScroll <= 450) {
 		navbar.classList.remove('setNav');
 	}
 });
 
-
-var overlay = document.getElementById("overlay");
- 
-window.addEventListener('load', function()
-{
+window.addEventListener('load', function(){
+	let overlay = document.querySelector('.overlay');
 	overlay.style.display = 'none';
-})
+});
+
