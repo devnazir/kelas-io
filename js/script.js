@@ -10,17 +10,16 @@ menuToggle.addEventListener('click', function () {
 	}
 });
 
-window.addEventListener('scroll', function () {
-	
-	let wScroll = window.scrollY;
-	console.log(wScroll)
-	const navbar = document.querySelector('header nav');
-	if (wScroll > 450) {
-		navbar.classList.add('setNav');
-	} else if (wScroll <= 450) {
-		navbar.classList.remove('setNav');
-	}
-});
+// window.addEventListener('scroll', function () {
+// 	let wScroll = window.scrollY;
+// 	console.log(wScroll)
+// 	const navbar = document.querySelector('header nav');
+// 	if (wScroll > 450) {
+// 		navbar.classList.add('setNav');
+// 	} else if (wScroll <= 450) {
+// 		navbar.classList.remove('setNav');
+// 	}
+// });
 
 window.addEventListener('load', function(){
 	let overlay = document.querySelector('.overlay');

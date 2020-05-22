@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kelas.io</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -51,7 +52,11 @@
         </div>
 
         <div class="img-header">
-          <img src="img/image-header.png" alt="">
+          <picture>
+            <source media="(min-width:568px)" srcset="img/image-header.png">
+            <source media="(min-width:120px)" srcset="img/image-header-responsive.png">
+            <img src="img/image-header.png" alt="Header">
+          </picture>
         </div>
       </section>
     </header>
@@ -117,9 +122,9 @@
       </nav>
     </footer>
     <!-- Akhir Footer -->
-  
-  <!-- Back to Top -->
-  <!-- End -->
+
+    <!-- Back to Top -->
+    <!-- End -->
 
   </div>
   <!-- Akhir Container -->
