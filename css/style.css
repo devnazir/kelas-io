@@ -370,7 +370,7 @@ footer nav ul li a {
     border-radius: 50%;
     border: 5px outset white;
     margin: auto;
-    animation: animasiLoading 5s ease-out;
+    animation: animasiLoading 5s ease-out infinite;
 }
 
 @keyframes animasiLoading {
