@@ -186,7 +186,7 @@ header nav ul.nav-open {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, .3);
     transition: 0.5s;
     height: 80px;
@@ -257,14 +257,13 @@ header nav ul.nav-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
 }
 
 .about .about-container .about-web .kelas-io {
-    width: 100%;
-    justify-content: space-evenly;
+    width: max-content;
+    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .about .about-container .about-web .kelas-io h1 {
@@ -274,22 +273,17 @@ header nav ul.nav-open {
     font-size: 48px;
     align-items: center;
     font-family: Poppins-Bold, arial, 'sans-serif';
-    margin: auto;
 }
 
-.about .about-container .about-web .kelas-io hr {
+.about .about-container .about-web .kelas-io hr, .about .about-container .about-web-dua .kelas-io hr, .about .about-container .about-web-tiga .kelas-io hr {
     display: none;
 }
 
 .about .about-container .about-web .kelas-io p {
-    margin-top: 25px;
+    margin-top: 30px;
     width: 467px;
     font-size: 16px;
     margin: auto;
-}
-
-.about .about-container .about-web .img img {
-    display: none;
 }
 
 .about .about-container .about-web .kelas-io h1 span {
@@ -299,6 +293,7 @@ header nav ul.nav-open {
 .about .about-container .about-web .kelas-io .link {
     display: flex;
     width: 445px;
+    margin-top: 30px;
 }
 
 .about .about-container .about-web .kelas-io .link img {
@@ -307,6 +302,180 @@ header nav ul.nav-open {
     background: rgba(58, 131, 240, 0.15);
     border-radius: 50%;
     padding: 5px;
+    margin-right: 20px;
+}
+
+.about .about-container .about-web-dua {
+    grid-area: 4 / 1 / 5 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px
+}
+
+.about .about-container .about-web .kelas-io {
+    width: max-content;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .about-container .about-web-dua .kelas-io h1 {
+    color: #1A1A1A;
+    width: 504px;
+    font-size: 48px;
+    font-family: Poppins-Bold, arial, 'sans-serif';
+    padding-bottom: 30px;
+}
+
+.about .about-container .about-web-dua .kelas-io p {
+    width: 519px;
+    font-size: 16px;
+}
+
+.about .about-container .about-web-dua .kelas-io h1 span {
+    color: #3A83F0;
+}
+
+.about .about-container .about-web-dua .kelas-io .link {
+    display: flex;
+    margin-top: 30px;
+}
+
+.about .about-container .about-web-dua .kelas-io .link img {
+    width: 24px;
+    margin: auto;
+    background: rgba(58, 131, 240, 0.15);
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.about .about-container .about-web-tiga {
+    grid-area: 5 / 1 / 6 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about .about-container .about-web-tiga .img {
+    order: 2;
+}
+
+.about .about-container .about-web-tiga .kelas-io {
+    order: 1;
+    width: max-content;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(90px);
+}
+
+.about .about-container .about-web-tiga .kelas-io h1 {
+    color: #1A1A1A;
+    width: 346px;
+    font-size: 48px;
+    font-family: Poppins-Bold, arial, 'sans-serif';
+    padding-bottom: 30px;
+}
+
+.about .about-container .about-web-tiga .kelas-io p {
+    margin-top: 30px;
+    width: 547px;
+    font-size: 16px;
+    margin: auto;
+}
+
+.about .about-container .about-web-tiga .kelas-io h1 span {
+    color: #3A83F0;
+}
+
+.about .about-container .about-web-tiga .kelas-io .link {
+    display: flex;
+    margin-top: 30px;
+    width: 450px;
+}
+
+.about .about-container .about-web-tiga .kelas-io .link img {
+    width: 24px;
+    margin: auto;
+    background: rgba(58, 131, 240, 0.15);
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.about .about-container .about-web-fitur {
+    grid-area: 6 / 1 / 7 / 4;
+    background-image: linear-gradient(to top, rgba(150, 187, 241, 0.4), white);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.about .about-container .about-web-fitur .fitur-title {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.about .about-container .about-web-fitur .fitur-title h1 {
+    width: 536px;
+    font-size: 40px;
+    font-family: 'Poppins-Bold';
+}
+
+.about .about-container .about-web-fitur .fitur-title h1 span {
+    color: #3A83F0;
+}
+
+.about .about-container .about-web-fitur .fitur-title a {
+    text-decoration: none;
+    color: #194990;
+    position: relative;
+}
+
+.about .about-container .about-web-fitur .fitur-title a::after {
+    content: "";
+    display: block;
+    width: inherit;
+    border: 1px solid #194990;
+}
+
+.about .about-container .about-web-fitur .fitur-title a::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #194990;
+    border-top: 2px solid #194990;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -12px;
+    top: 9px;
+}
+
+.about .about-container .about-web-fitur .fitur-list {
+    display: flex;
+    margin-top: 90px;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 100px auto 200px;
+    justify-content: center;
+}
+
+.about .about-container .about-web-fitur .fitur-list .kotak {
+    width: 330px;
+    height: 345px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 15px;
 }
 
 /* Akhir About */
@@ -390,15 +559,7 @@ footer nav ul li a {
     .about .about-container .about-web {
         height: max-content;
     }
-    .about .about-container .about-web .img img {
-        display: block;
-        width: 567px;
-    }
-    .about .about-container .about-web .kelas-io {
-        display: grid;
-        width: 467px;
-    }
-    .about .about-container .about-web .kelas-io hr {
+    .about .about-container .about-web .kelas-io hr, .about .about-container .about-web-dua .kelas-io hr, .about .about-container .about-web-tiga .kelas-io hr {
         margin-top: 40px;
         width: 445px;
         display: block;
@@ -436,7 +597,7 @@ footer nav ul li a {
         overflow-y: scroll !important;
         position: absolute;
         background-color: #194990;
-        top: 50px;
+        top: 45px;
         width: 100%;
         transform: scale(1.3) translateX(1000px);
         opacity: 0;
@@ -479,21 +640,34 @@ footer nav ul li a {
     .about .about-container .about-head .content:nth-child(2)::after {
         display: none;
     }
-    .about .about-container .about-web .kelas-io {
+    .about .about-container .about-web, .about .about-container .about-web-dua, .about .about-container .about-web-tiga {
+        height: 500px;
+    }
+    .about .about-container .about-web .img, .about .about-container .about-web-dua .img, .about .about-container .about-web-tiga .img {
+        display: none;
+    }
+    .about .about-container .about-web .kelas-io, .about .about-container .about-web-dua .kelas-io, .about .about-container .about-web-tiga .kelas-io {
         justify-content: center;
         width: 550px;
+    }
+    .about .about-container .about-web-tiga .kelas-io {
+        transform: translateX(0px);
     }
     .about .about-container .about-web .kelas-io p {
         width: inherit;
     }
-    .about .about-container .about-web .kelas-io .link img {
-        display: none;
-    }
     .about .about-container .about-web .kelas-io .link {
         width: inherit;
     }
-    .about .about-container .about-web .kelas-io .link p {
-        margin-top: 20px;
+    .about .about-container .about-web-fitur .fitur-title {
+        flex-direction: column;
+        
+    }
+    .about .about-container .about-web-fitur .fitur-list {
+        width: 100%;
+    }
+    .about .about-container .about-web-fitur .fitur-list .kotak {
+        width: 250px;
     }
     /* Akhir About */
     /* Footer */
@@ -580,16 +754,27 @@ footer nav ul li a {
         width: 50%;
         left: 25%;
     }
-    .about .about-container .about-web .kelas-io h1 {
+    .about .about-container .about-web .kelas-io .link img, .about .about-container .about-web-dua .kelas-io .link img, .about .about-container .about-web-tiga .kelas-io .link img {
+        display: none;
+    }
+    .about .about-container .about-web .kelas-io h1, .about .about-container .about-web-dua .kelas-io h1, .about .about-container .about-web-tiga .kelas-io h1 {
         font-size: 30px;
         text-align: center;
+        margin: auto;
     }
-    .about .about-container .about-web .kelas-io p {
+    .about .about-container .about-web-dua .kelas-io h1 {
+        width: 300px;
+    }
+    .about .about-container .about-web, .about .about-container .about-web-dua, .about .about-container .about-web-tiga {
+        height: 450px;
+        width: 300px;
+        margin: auto;
+    }
+    .about .about-container .about-web .kelas-io p, .about .about-container .about-web-dua .kelas-io p, .about .about-container .about-web-tiga .kelas-io p {
         font-size: 14px;
-    }
-    .about .about-container .about-web .kelas-io {
         width: 300px;
         text-align: justify;
+        margin: auto;
     }
     .about .about-container .about-head .content p {
         font-size: 14px;
@@ -597,6 +782,18 @@ footer nav ul li a {
     .about .about-container .about-head .content h3 {
         font-size: 30px;
         height: 50px;
+    }
+    .about-container .about-web-fitur .fitur-title h1 {
+        width: 300px !important;
+        font-size: 30px !important;
+        margin: auto;
+    }
+    .about .about-container .about-web-fitur .fitur-title a {
+        font-size: 12px;
+        align-self: center;
+    }
+    .about .about-container .about-web-fitur .fitur-list .kotak {
+        width: 330px;
     }
     /* Akhir About */
     /* Footer */
@@ -615,6 +812,7 @@ footer nav ul li a {
     footer nav ul li a {
         font-size: 14px;
     }
+
     /* Akhir */
 }
 
