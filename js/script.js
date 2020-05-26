@@ -1,7 +1,5 @@
 const menuToggle = document.querySelector('header nav .menu-toggle');
-const li = document.querySelectorAll('header nav ul li a');
-
-menuToggle.addEventListener('click', function () {
+function menuToggleOpen() {
 	this.classList.toggle('close');
 	this.parentElement.children[1].classList.toggle('nav-open');
 	if (this.parentElement.children[1].classList.contains('nav-open')) {
@@ -10,19 +8,20 @@ menuToggle.addEventListener('click', function () {
 	} else {
 		document.body.style.overflowY = 'visible';
 	}
-});
+}
+menuToggle.addEventListener('click', menuToggleOpen);
 
-li.forEach((link) => {
-	link.addEventListener('click', function () {
-		document.body.style.overflowY = 'visible';
-		this.parentElement.parentElement.classList.remove('nav-open');
-		this.parentElement.parentElement.nextElementSibling.classList.remove('close');
-	});
 
-});
+const li = document.querySelectorAll('header nav ul li a');
+function menuToggleClose() {
+	document.body.style.overflowY = 'visible';
+	this.parentElement.parentElement.classList.remove('nav-open');
+	this.parentElement.parentElement.nextElementSibling.classList.remove('close');
+}
+li.forEach(link => { link.addEventListener('click', menuToggleClose) });
 
-window.addEventListener('load', function () {
+function loading(){
 	let overlay = document.querySelector('.overlay');
 	overlay.style.display = 'none';
-});
-
+}
+window.addEventListener('load', loading);

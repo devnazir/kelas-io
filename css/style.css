@@ -266,6 +266,10 @@ header nav ul.nav-open {
     flex-direction: column;
 }
 
+.about .about-container .about-web .kelas-io img{
+    display: none;
+}
+
 .about .about-container .about-web .kelas-io h1 {
     width: 221px;
     padding-bottom: 20px;
@@ -276,7 +280,11 @@ header nav ul.nav-open {
 }
 
 .about .about-container .about-web .kelas-io hr, .about .about-container .about-web-dua .kelas-io hr, .about .about-container .about-web-tiga .kelas-io hr {
-    display: none;
+    margin-top: 40px;
+    width: 445px;
+    display: block;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .about .about-container .about-web .kelas-io p {
@@ -477,7 +485,20 @@ header nav ul.nav-open {
     box-sizing: border-box;
     margin: 15px;
 }
-
+.about .about-container .about-web-fitur .fitur-list .kotak img {
+    width: 15px;
+    padding: 15px;
+    background-color: rgba(58, 131, 240, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.about .about-container .about-web-fitur .fitur-list .kotak h3 {
+    font-size: 24px;
+}
+.about .about-container .about-web-fitur .fitur-list .kotak p {
+    margin-top: 20px;
+    font-size: 16px;
+}
 /* Akhir About */
 
 /* Footer */
@@ -558,11 +579,6 @@ footer nav ul li a {
 @media screen and (min-width:1336px) {
     .about .about-container .about-web {
         height: max-content;
-    }
-    .about .about-container .about-web .kelas-io hr, .about .about-container .about-web-dua .kelas-io hr, .about .about-container .about-web-tiga .kelas-io hr {
-        margin-top: 40px;
-        width: 445px;
-        display: block;
     }
     .about .about-container .about-web .kelas-io h1 {
         margin: unset;
@@ -657,7 +673,7 @@ footer nav ul li a {
         width: inherit;
     }
     .about .about-container .about-web .kelas-io .link {
-        width: inherit; 
+        width: inherit;
     }
     .about .about-container .about-web-fitur .fitur-title {
         flex-direction: column;
@@ -740,12 +756,15 @@ footer nav ul li a {
     .about .about-container .about-head .content {
         position: relative;
     }
+    .about .about-container .about-head .content p {
+        width: 205px;
+    }
     .about .about-container .about-head .content:nth-child(2)::before {
         content: "";
         display: block;
         position: absolute;
         top: -40px;
-        border-top: 1px solid rgba(0, 0, 0, 0.4);
+        border-top: 2px solid rgba(0, 0, 0, 0.25);
         border-bottom: 1px solid transparent;
         border-right: 1px solid transparent;
         border-left: 1px solid transparent;
@@ -758,7 +777,7 @@ footer nav ul li a {
         position: absolute;
         top: 30px;
         border-top: 1px solid transparent;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.25);
         border-right: 1px solid transparent;
         border-left: 1px solid transparent;
         width: 50%;
@@ -769,41 +788,47 @@ footer nav ul li a {
         text-align: left;
         margin: auto;
     }
-    .about .about-container .about-web .kelas-io hr,
-    .about .about-container .about-web-dua .kelas-io hr,
-    .about .about-container .about-web-tiga .kelas-io hr {
+    .about .about-container .about-web, .about .about-container .about-web-dua, .about .about-container .about-web-tiga {
+        height: auto;
+        width: 300px;
+        margin: 70px auto;
+    }
+    .about .about-container .about-web .kelas-io img,
+    .about .about-container .about-web-dua .kelas-io img,
+    .about .about-container .about-web-tiga .kelas-io img{
+        display: block;
+        width: 300px;
+        transform: scale(1.2);
+        margin-bottom: 30px !important;
+        margin-top: 30px !important;
+    }
+    .about .about-container .about-web .kelas-io hr {
         display: block;
         width: 300px;
         border: none;
         margin: 30px auto 0;
         border: 0.3px solid rgba(0, 0, 0, 0.25);
     }
-    .about .about-container .about-web .kelas-io .link p,
-    .about .about-container .about-web-dua .kelas-io .link p,
-    .about .about-container .about-web-tiga .kelas-io .link p {
+    .about .about-container .about-web .kelas-io hr, .about .about-container .about-web-dua .kelas-io hr, .about .about-container .about-web-tiga .kelas-io hr {
+        display: block;
+        width: 300px;
+        border: none;
+        margin: 30px auto 0;
+        border: 0.3px solid rgba(0, 0, 0, 0.25);
+    }
+    .about .about-container .about-web .kelas-io .link p, .about .about-container .about-web-dua .kelas-io .link p, .about .about-container .about-web-tiga .kelas-io .link p {
         font-size: 10px;
     }
-    .about .about-container .about-web .kelas-io .link,
-    .about .about-container .about-web-dua .kelas-io .link,
-    .about .about-container .about-web-tiga .kelas-io .link{
+    .about .about-container .about-web .kelas-io .link, .about .about-container .about-web-dua .kelas-io .link, .about .about-container .about-web-tiga .kelas-io .link {
         margin-top: 15px;
         width: 300px;
     }
-    .about .about-container .about-web .kelas-io .link img,
-    .about .about-container .about-web-dua .kelas-io .link img,
-    .about .about-container .about-web-tiga .kelas-io .link img {
-       display: block;
-       width: 15px;
+    .about .about-container .about-web .kelas-io .link img, .about .about-container .about-web-dua .kelas-io .link img, .about .about-container .about-web-tiga .kelas-io .link img {
+        display: block;
+        width: 15px;
     }
-    .about .about-container .about-web .kelas-io h1,
-    .about .about-container .about-web-dua .kelas-io h1,
-    .about .about-container .about-web-tiga .kelas-io h1 {
+    .about .about-container .about-web .kelas-io h1, .about .about-container .about-web-dua .kelas-io h1, .about .about-container .about-web-tiga .kelas-io h1 {
         width: 300px;
-    }
-    .about .about-container .about-web, .about .about-container .about-web-dua, .about .about-container .about-web-tiga {
-        height: 350px;
-        width: 300px;
-        margin: auto;
     }
     .about .about-container .about-web .kelas-io p, .about .about-container .about-web-dua .kelas-io p, .about .about-container .about-web-tiga .kelas-io p {
         font-size: 12px;
@@ -845,11 +870,7 @@ footer nav ul li a {
         margin-top: 20px;
     }
     .about .about-container .about-web-fitur .fitur-list .kotak img {
-        width: 15px;
         padding: 5px;
-        background-color: rgba(58, 131, 240, 0.1);
-        border-radius: 10px;
-        margin-bottom: 20px;
     }
     /* Akhir About */
     /* Footer */
@@ -868,7 +889,6 @@ footer nav ul li a {
     footer nav ul li a {
         font-size: 14px;
     }
-
     /* Akhir */
 }
 
