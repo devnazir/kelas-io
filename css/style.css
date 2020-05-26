@@ -266,7 +266,9 @@ header nav ul.nav-open {
     flex-direction: column;
 }
 
-.about .about-container .about-web .kelas-io img{
+.about .about-container .about-web .kelas-io img,
+.about .about-container .about-web-dua .kelas-io img,
+.about .about-container .about-web-tiga .kelas-io img{
     display: none;
 }
 
