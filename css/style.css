@@ -266,9 +266,7 @@ header nav ul.nav-open {
     flex-direction: column;
 }
 
-.about .about-container .about-web .kelas-io img,
-.about .about-container .about-web-dua .kelas-io img,
-.about .about-container .about-web-tiga .kelas-io img{
+.about .about-container .about-web .kelas-io picture img, .about .about-container .about-web-dua .kelas-io picture img, .about .about-container .about-web-tiga .kelas-io picture img {
     display: none;
 }
 
@@ -487,6 +485,7 @@ header nav ul.nav-open {
     box-sizing: border-box;
     margin: 15px;
 }
+
 .about .about-container .about-web-fitur .fitur-list .kotak img {
     width: 15px;
     padding: 15px;
@@ -494,14 +493,148 @@ header nav ul.nav-open {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
 .about .about-container .about-web-fitur .fitur-list .kotak h3 {
     font-size: 24px;
 }
+
 .about .about-container .about-web-fitur .fitur-list .kotak p {
     margin-top: 20px;
     font-size: 16px;
 }
+
+.about .about-container .about-web-pengguna {
+    grid-area: 7 / 1 / 8 / 4;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    width: 100%;
+}
+
+.about .about-container .about-web-pengguna .title {
+    height: 150px;
+    width: 80%;
+    margin: auto;
+}
+
+.about .about-container .about-web-pengguna .title h1 {
+    color: #1A1A1A;
+    width: 498px;
+    font-size: 48px;
+    font-family: 'Poppins-Bold';
+}
+
+.about .about-container .about-web-pengguna .title h1 span {
+    color: #3A83F0;
+}
+
+.about .about-container .about-web-pengguna .pengguna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(58, 131, 240, 0.05);
+    margin-top: 50px;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) {
+    margin-bottom: -40px;
+    margin-top: -250px;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak p {
+    width: 512px;
+    transform: translateX(50px);
+    font-size: 20px;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak picture {
+    transform: scale(0.9);
+    width: 700px;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak:nth-child(1) picture {
+    transform: translateY(-195px);
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) picture {
+    order: 1;
+    transform: scale(0.9) translateX(-200px);
+    width: 700px;
+}
+
+.about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) p {
+    order: 2;
+    transform: translateX(-50px);
+}
+
 /* Akhir About */
+
+/* Download */
+.download {
+    background-color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.download h1 {
+    font-size: 48px;
+    font-family: 'Poppins-Bold';
+    color: #1A1A1A;
+}
+
+.download h1 span {
+    color: #3A83F0;
+}
+
+.download p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+.download .btn {
+    width: 400px;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-evenly;
+}
+
+.download .btn button {
+    display: block;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #3A83F0;
+}
+
+.download .btn button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #194990;
+}
+
+.download .btn a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins-Bold';
+    letter-spacing: 3%;
+}
+
+.download .btn button:nth-child(2)  a{
+    color: #194990;
+    font-family: 'Poppins';
+}
+/* Akhir Download */
 
 /* Footer */
 
@@ -697,10 +830,55 @@ footer nav ul li a {
         left: 0;
         bottom: -50px;
     }
+    .about .about-container .about-web-pengguna .pengguna {
+        margin-top: 120px;
+        background-color: rgba(58, 131, 240, 0.05);
+    }
+    .about .about-container .about-web-pengguna .title h1 {
+        margin: auto;
+        font-size: 45px;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak {
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: auto;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(1) picture {
+        transform: translateX(-120px) scale(0.7) translateY(-328px);
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak p {
+        transform: translateX(20px) translateY(-280px);
+        font-size: 16px;
+        width: 500px;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) {
+        flex-direction: column;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) picture {
+        transform: translateX(80px) scale(0.7) translateY(-200px);
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) p {
+        transform: translateX(20px) translateY(-200px);
+    }
     /* Akhir About */
+
+    /* Download */
+    .download {
+        width: 80%;
+        margin: auto;
+    }
+    .download h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    /* Akhir Download */
+    
     /* Footer */
     footer nav {
         flex-direction: column;
+    }
+    footer nav .logo {
+        width: 75%;
     }
     /* Akhir Footer */
 }
@@ -795,9 +973,7 @@ footer nav ul li a {
         width: 300px;
         margin: 70px auto;
     }
-    .about .about-container .about-web .kelas-io img,
-    .about .about-container .about-web-dua .kelas-io img,
-    .about .about-container .about-web-tiga .kelas-io img{
+    .about .about-container .about-web .kelas-io picture img, .about .about-container .about-web-dua .kelas-io picture img, .about .about-container .about-web-tiga .kelas-io picture img {
         display: block;
         width: 300px;
         transform: scale(1.2);
@@ -874,19 +1050,73 @@ footer nav ul li a {
     .about .about-container .about-web-fitur .fitur-list .kotak img {
         padding: 5px;
     }
-    /* Akhir About */
-    /* Footer */
-    footer nav {
-        height: 300px;
+    .about .about-container .about-web-pengguna .title {
+        margin-left: 0;
     }
+    .about .about-container .about-web-pengguna .title h1 {
+        font-size: 20px;
+        width: 249px;
+    }
+    .about .about-container .about-web-pengguna .pengguna {
+        margin-top: 0px;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak {
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(1) picture {
+        transform: translateX(220px) scale(1) translateY(-80px);
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak p {
+        transform: translateX(0px) translateY(-40px);
+        line-height: 30px;
+        letter-spacing: 3%;
+        font-size: 12px;
+        width: 307px;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) {
+        flex-direction: column;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) picture {
+        transform: translateX(80px) scale(1) translateY(-40px);
+    }
+    .about .about-container .about-web-pengguna .pengguna .kotak:nth-child(2) p {
+        transform: translateX(0px) translateY(0px);
+    }
+    /* Akhir About */
+
+    /* Download */
+    .download {
+        margin-top: -50px;
+    }
+    .download h1 {
+       width: 276px;
+       font-size: 24px;
+    }
+    .download p {
+        width: 299px;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 12px;
+        text-align: center;
+    }
+    .download .btn {
+        width: 300px;
+    } 
+    /* Akhir Download */
+    /* Footer */
+    /* footer nav {
+        height: 300px;
+    } */
     footer nav .logo {
-        display: none;
+        transform: scale(0.7);
+        width: 100%;
     }
     footer nav ul {
-        flex-direction: column;
-        width: auto;
+        /* flex-direction: column; */
+        width: 80%;
         height: 250px;
-        justify-content: space-around;
     }
     footer nav ul li a {
         font-size: 14px;
